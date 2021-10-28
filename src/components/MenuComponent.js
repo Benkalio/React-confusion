@@ -5,7 +5,7 @@ class Menu extends Component {
     constructor(props){
         super(props);
 
-        //DEFINE STATE FOR THE RESTRAURANT MENU
+        //DEFINE STATE FOR THE RESTAURANT MENU
         this.state = {
 
             //INTRODUCING THE ON CLICK PROPERTY ON THE MENU ITEMS, WHICH IS CODED ON THE CARD TAG BELOW
@@ -30,35 +30,38 @@ class Menu extends Component {
                 </Card>
             )
         } else {
-            return (<div></div>)
+            return (<div></div>);
         }
     }
 
 
-    render(){
+    render() {
         const menu =this.props.dishes.map((dish) => {
             return (
                 //CREATING 12 COLUMNS WITH BOOTSTRAP WITH THE KEY PROPERTY TO IDENTIFY THE LIST OF DISHES ABOVE
                 //USING REACT MEDIA CLASS TO RENDER THE APPLICATION ***READ UP REACT DOCUMENTATION ON MEDIA
-                <div key={dish.id} className="col-12 col-md-5 m-1">
-                    {/* WHEN THE CARD IS CLICKED */}
-                    <Card onClick={() => this.onDishSelect()}>
+                // /* WHEN THE CARD IS CLICKED */
+                <div className="col-12 col-md-5 m-1">
+                    
+                    <Card key={dish.id} onClick={() => this.onDishSelect(dish)}>
                             <CardImg width="100%" src={dish.image} alt={dish.name} />
                         <CardImgOverlay>
                             <CardTitle>{dish.name}</CardTitle>
                         </CardImgOverlay>
                     </Card>
                 </div>
-            )
+            );
         });
         return(
             //USING BOOTSTRAP CLASSES ##READ MORE ON CSS BOOTSTRAP
             <div className="container">
                 <div className="row">
-                        {menu}
+                    {menu}
                 </div>
-                <div className="row">
+                <div className="col-12 col-md-5 m-1">
+                    <div className="row">
                     {this.renderDish(this.state.selectedDish)}
+                    </div>
                 </div>
             </div>
         );
