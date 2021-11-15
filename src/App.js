@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './components/MenuComponent';
 import './App.css';
@@ -7,10 +7,8 @@ import { Component } from 'react';
 
 class App extends Component {
   
-
   constructor(props) {
     super(props);
-
 
     // DEFINE THE STATE OF THE DISH MENU IMPORTED FROM DISHES.JS
     this.state = {
@@ -23,7 +21,7 @@ class App extends Component {
     <div>
      <Navbar dark color="primary">
        <div className="container">
-         <NavbarBrand href="/">RESTRAURANT Con Fusion</NavbarBrand>
+         <NavbarBrand href="/">RESTAURANT MENU</NavbarBrand>
        </div>
      </Navbar>
     <Menu dishes ={this.state.dishes} />
