@@ -1,8 +1,8 @@
-import React from 'react';
+// import React from 'react';
 
-class DishDetail {
-    return{
+// class DishDetail {
+//     return{
         
-    }
-}
-export default DishDetail;
+//     }
+// }
+// export default DishDetail;
