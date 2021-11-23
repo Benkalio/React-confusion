@@ -33,8 +33,7 @@ class Menu extends Component {
             return (<div></div>);
         }
     }
-
-
+    
     render() {
         const menu =this.props.dishes.map((dish) => {
             return (
@@ -60,7 +59,7 @@ class Menu extends Component {
                 </div>
                 <div className="col-12 col-md-5 m-1">
                     <div className="row">
-                    {this.renderDish(this.state.selectedDish)}
+                        {this.renderDish(this.state.selectedDish)}
                     </div>
                 </div>
             </div>
