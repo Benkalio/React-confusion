@@ -1,8 +1,17 @@
-// import React from 'react';
+import React, { Component } from "react";
 
-// class DishDetail {
-//     return{
-        
-//     }
-// }
-// export default DishDetail;
+class DishDetail extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return(
+            <div className="container">
+                <div className="row">
+                    
+                </div>
+            </div>
+        );
+    }
+}
