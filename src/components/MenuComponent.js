@@ -44,7 +44,7 @@ class Menu extends Component {
                 <div className="col-12 col-md-5 m-1">
                     
                     <Card key={dish.id} onClick={() => this.onDishSelect(dish)}>
-                            <CardImg width="100%" src={dish.image} alt={dish.name} />
+                        <CardImg width="100%" src={dish.image} alt={dish.name} />
                         <CardImgOverlay>
                             <CardTitle>{dish.name}</CardTitle>
                         </CardImgOverlay>
