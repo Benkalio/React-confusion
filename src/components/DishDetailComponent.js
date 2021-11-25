@@ -3,11 +3,11 @@ import { Card, CardImg, CardImgOverlay, CardBody, CardText, CardTitle} from 'rea
 // import Menu from "./MenuComponent";
 
 export const DishDetail = ({ selectedDish }) => {
-    // renderComments(){
-    //     let comment = dishes.map((comments) =>{
+    renderComments(){
+        let comment = dishes.map((comments) =>{
 
-    //     })
-    // }
+        })
+    }
     return (
         <div className="container">
             <div className="row">
