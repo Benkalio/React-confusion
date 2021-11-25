@@ -2,22 +2,6 @@ import React, {Component} from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle} from 'reactstrap';
 
 class Menu extends Component {
-    constructor(props){
-        super(props);
-
-
-    }
-
-    renderDish(dish) {
-        if (dish != null) {
-            return (
-                <DishDetail dish={this.state.selectedDish} />
-
-            )
-        } else {
-            return (<div></div>);
-        }
-    }
     
     render() {
         const menu = this.props.dishes.map((dish) => {
