@@ -8,7 +8,6 @@ class Menu extends Component {
 
         //DEFINE STATE FOR THE RESTAURANT MENU
         this.state = {
-
             //INTRODUCING THE ON CLICK PROPERTY ON THE MENU ITEMS, WHICH IS CODED ON THE CARD TAG BELOW
             selectedDish: null
         }
@@ -22,7 +21,8 @@ class Menu extends Component {
     renderDish(dish) {
         if (dish != null) {
             return (
-                <DishDetail selectedDish={this.state.selectedDish}/>
+                <DishDetail dish={this.state.selectedDish} />
+
             )
         } else {
             return (<div></div>);
@@ -30,7 +30,7 @@ class Menu extends Component {
     }
     
     render() {
-        const menu =this.props.dishes.map((dish) => {
+        const menu = this.props.dishes.map((dish) => {
             return (
                 //CREATING 12 COLUMNS WITH BOOTSTRAP WITH THE KEY PROPERTY TO IDENTIFY THE LIST OF DISHES ABOVE
                 //USING REACT MEDIA CLASS TO RENDER THE APPLICATION ***READ UP REACT DOCUMENTATION ON MEDIA
@@ -46,14 +46,16 @@ class Menu extends Component {
             );
         });
         return(
-            //USING BOOTSTRAP CLASSES ##READ MORE ON CSS BOOTSTRAP
             <div className="container">
                 <div className="row">
                     {menu}
                 </div>
                 <div className="col-12 col-md-5 m-1">
                     <div className="row">
-                        {this.renderDish(this.state.selectedDish)}
+                        <DishDetail selectedDish={this.state.selectedDish}/>
+                    </div>
+                    <div className="row">
+                        <DishDetail comments={this.state.comments} />
                     </div>
                 </div>
             </div>
