@@ -1,5 +1,6 @@
 import React, {Component} from "react"; 
-import { Navbar, NavbarBrand, Jumbotron } from 'reactstrap';
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { NavLink } from "react-router-dom";
 
 
 class Header extends Component {
@@ -8,7 +9,7 @@ class Header extends Component {
             // USING REACT FRAGMENTS TO RETURN ELEMENTS (<React.Fr></React.Fr>)
             //GROUP REACT ELEMENT AND RETURN THEM DIRECTLY INTO THE DOM
             <React.Fragment>
-                <Navbar dark color="primary">
+                <Navbar dark >
                     <div className="container">
                         <NavbarBrand href="/">Restorante Con Fusion</NavbarBrand>
                     </div>
