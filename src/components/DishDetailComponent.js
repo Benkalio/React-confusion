@@ -17,7 +17,6 @@ import { Card, CardImg, CardBody, CardText, CardTitle} from 'reactstrap';
             </div>
         )
     }
-
     function RenderComments({comments}) {
         if(comments != null)
             return (
@@ -41,10 +40,9 @@ import { Card, CardImg, CardBody, CardText, CardTitle} from 'reactstrap';
                 );
     }
 
+
     // PART OF ASSIGNMENT 1
     const DishDetail = (props) => {
-        // console.log('DishDetail Component render invoked');
-
         if (props.dish != null)
             return(
                 <div className="container">
