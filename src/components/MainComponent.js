@@ -1,6 +1,10 @@
 import Menu from './MenuComponent';
 import Home from './HomeComponent';
+import Contact from './ContactComponent';
 import { DISHES } from '../shared/dishes';
+import { COMMENTS } from '../shared/comments';
+import { LEADERS } from '../shared/leaders';
+import { PROMOTIONS } from '../shared/promotions';
 import { Component } from 'react';
 import  DishDetail from './DishDetailComponent';
 import Header from './HeaderComponent';
@@ -13,32 +17,31 @@ class Main extends Component {
 
     // DEFINE THE STATE OF THE DISH MENU IMPORTED FROM DISHES.JS
     this.state = {
-      dishes: DISHES
+      dishes: DISHES,
+      comments: COMMENTS,
+      leaders: LEADERS,
+      promotions: PROMOTIONS
     };
   }
-   // WHAT HAPPENS WHEN THE DISH IS CLICKED, THIS CODE SELECTS THE STATE OF THE DISH ID
-  // onDishSelect(dishId) {
-  //   this.setState({ selectedDish: dishId});
-  // }
 
   render() {
 
     const HomePage = () => {
       return (
-        <Home />
+        // FILTERING AND RENDERING THE DEFAULT TRUE VALUE OF THE SHARED FILES  
+        <Home dish={ this.state.dishes.filter((dish) => dish.featured)[0]} 
+         promotions={ this.state.promotions.filter((promotion) => promotion.featured)[0]}
+         leaders={ this.state.leaders.filter((leader) => leader.featured)[0]}
+        />
       );
     }
     return (
      <div>
         <Header />
-        {/* <Menu dishes ={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)} />
-        <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish) } /> */}
-        {/* <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} /> */}
-
-        {/* REACT ROUTE IMPLEMENTED FOR COMPONENTS ABOVE (COMMENTED OUT) */}
         <Switch>
           <Route path="/home" component={HomePage} />
           <Route exact path="/menu" component={() => <Menu dishes = {this.state.dishes} />} />
+          <Route exact path="/contactus" component={Contact} />
           <Redirect to="/home" />
         </Switch>
 

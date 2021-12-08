@@ -12,7 +12,6 @@ import { Card, CardImg, CardImgOverlay, CardTitle} from 'reactstrap';
             </Card>
         );
     }
-
     // second way of implementing functional component 
     const Menu = (props) => {
         const menu = props.dishes.map((dish) => {
