@@ -68,9 +68,6 @@ function About(props) {
                     <Media list>
                         {leaders}
                     </Media>
-                    <Media list>
-                        {leaders}
-                    </Media>
                 </div>
             </div>
         </div>
