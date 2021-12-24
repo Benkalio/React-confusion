@@ -85,7 +85,7 @@ class Contact extends Component {
                     {/* FORM TO COLLECT USERS CONTACT */}
                     <div className='col-12 col-md-9'>
                         <Form onSubmit={this.handleSubmit}>
-                            <FormGroup row>
+                            <FormGroup row style={{marginBottom: "10px"}}>
                                 <Label htmlFor="firstname" md={2}>First Name</Label>
                                 <Col md={10}>
                                     <Input type='text' id="firstname" name='firstname' 
@@ -103,7 +103,7 @@ class Contact extends Component {
                                         />
                                 </Col>
                             </FormGroup>
-                            <FormGroup row>
+                            <FormGroup row style={{marginTop: "10px"}}>
                                 <Label htmlFor="telnum" md={2}>Contact Tel.</Label>
                                 <Col md={10}>
                                     <Input type='text' id="telnum" name='telnum' 
@@ -112,7 +112,7 @@ class Contact extends Component {
                                         />
                                 </Col>
                             </FormGroup>
-                            <FormGroup row>
+                            <FormGroup row style={{marginTop: "10px"}}>
                                 <Label htmlFor="email" md={2}>Email</Label>
                                 <Col md={10}>
                                     <Input type='text' id="email" name='email' 
@@ -121,7 +121,7 @@ class Contact extends Component {
                                         />
                                 </Col>
                             </FormGroup>
-                            <FormGroup row>
+                            <FormGroup row style={{marginTop: "10px"}}>
                                 <Col md={{size: 6, offset: 2}}>
                                     <FormGroup check>
                                         <Label check>
@@ -141,7 +141,7 @@ class Contact extends Component {
                                     </Input>
                                 </Col>
                             </FormGroup>
-                            <FormGroup row >
+                            <FormGroup row style={{marginTop: "10px"}}>
                                 <Label htmlFor="message" md={2}>Your Feedback</Label>
                                 <Col md={10}>
                                     <Input type='textarea' id="message" name='message' rows="12" 
@@ -151,7 +151,7 @@ class Contact extends Component {
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
-                                <Col md={{size: 10, offset: 2}}>
+                                <Col md={{size: 10, offset: 2}} style={{marginTop: "10px"}}>
                                     <Button type='submit' color='primary'>
                                         Send Feedback
                                     </Button>
