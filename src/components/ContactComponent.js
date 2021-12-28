@@ -79,7 +79,7 @@ class Contact extends Component {
             errors.telnum = "Tel. Number should contain only numbers";
 
         // EMAIL 
-        if (this.state.touched.email && email.split('').filter(x => x === 'a').length !== 1)
+        if (this.state.touched.email && email.split('').filter(x => x === '@').length !== 1)
             errors.email = "Email should contain a @ sign";
 
         return errors;
