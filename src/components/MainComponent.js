@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 const mapStateTopProps = state => {
   return {
     dishes: state.dishes,
-    comment: state.comments,
+    comments: state.comments,
     promotions: state.promotions,
     leaders: state.leaders
   }
@@ -38,7 +38,7 @@ class Main extends Component {
     const DishWithId = ({match}) => {
       return (
         <DishDetail dish={this.props.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]} 
-          comments={this.props.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))}
+          comment={this.props.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))[0]}
         />
         
 

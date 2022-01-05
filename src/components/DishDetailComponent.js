@@ -16,12 +16,18 @@ import { Link } from 'react-router-dom';
         )
     }
     function RenderComments({comments}) {
+        // let comments = this.props.comments.map(comment => {
+        //     return <li>{comment.trim()}</li>
+        // })
+        if (!comments) return 'no data';
+        if (!Array.isArray(comments)) return 'results are not array'
         if(comments != null)
             return (
                 <div className="col-12 col-md-5 m-1">
                     <h4>Comments</h4>
                     <ul className="list-unstyled">
-                        {comments.map((comment) => {
+                        {
+                            comments.filter((comment) => {
                             return(
                                 <li key={comment.id}>
                                     <p>{comment.comment}</p>
@@ -56,7 +62,7 @@ import { Link } from 'react-router-dom';
                     </div>
                     <div className="row">
                         <RenderDish dish={props.dish} />
-                        <RenderComments comments={props.comments}/> 
+                        <RenderComments comments={props.comment}/> 
                     </div>
                 </div>
             );

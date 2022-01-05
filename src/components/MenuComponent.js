@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem,
+    Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 //FUNCTIONAL COMPONENT
@@ -40,6 +41,7 @@ import { Link } from 'react-router-dom';
                 <div className="row">
                     {menu}
                 </div>
+                
             </div>
         );
     }
