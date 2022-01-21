@@ -114,7 +114,7 @@ function RenderComments({comments}) {
     //     return <li>{comment.trim()}</li>
     // })
     // if (!comments) return 'no data';
-    // if (!Array.isArray(comments)) return 'results are not array'
+    if (!Array.isArray(comments)) return 'results are not array'
         const com = comments.map(comment => {
             if(comments != null){
                 return (
@@ -170,6 +170,7 @@ const DishDetail = (props) => {
         );
 }
 export default DishDetail;
+
 
 
 
