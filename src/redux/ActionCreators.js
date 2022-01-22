@@ -1,4 +1,5 @@
 import * as ActionTypes from './ActionTypes';
+import { DISHES } from '../shared/dishes';
 
 export const addComment = (dishId, rating, author, comment) => ({
     type: ActionTypes.ADD_COMMENT,
@@ -9,3 +10,26 @@ export const addComment = (dishId, rating, author, comment) => ({
         comment: comment
     }
 });
+
+//REDUX THUNK IMPLEMENTED IN THE FETCH DISHES FUNCTION
+export const fetchDishes = () =>(dispatch) => {
+    dispatch(dishesLoading(true))
+
+    setTimeout(() => {
+
+    }, 2000);
+}
+
+export const dishesLoading = () => ({
+    type: ActionTypes.DISHES_LOADING
+});
+
+export const dishesFailed = (errmess) => ({
+    type: ActionTypes.DISHES_FAILED,
+    payload: errmess
+});
+
+export const addDishes = (dishes) => ({
+    type: ActionTypes.ADD_DISHES,
+    payload: dishes
+})
