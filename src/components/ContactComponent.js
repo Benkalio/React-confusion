@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import {Breadcrumb, BreadcrumbItem, Button, Row, Label, Col} from 'reactstrap';
-import { Control, Form, Errors, actions } from 'react-redux-form';
+import { Control, Form, Errors } from 'react-redux-form';
 
 // STATE OF COMPONENT USED TO STORE THE STATE OF THE REACT FORM, HENCE THE FUNCTIONAL CONTACT COMPONENT 
 // IS CONVERTED TO A CLASS COMPONENT BELOW
@@ -21,12 +21,10 @@ class Contact extends Component {
     }
    
     handleSubmit(values) {
-        console.log("Current State is: " + JSON.stringify(values))
-        alert("Current State is: " + JSON.stringify(values));
+        this.props.postFeedback(values.firstname, values.lastname, values.telnum, values.email, values.agree, values.contactType, values.message);
         this.props.resetFeedbackForm();
     }
 
-    
     render() {
 
         return(
