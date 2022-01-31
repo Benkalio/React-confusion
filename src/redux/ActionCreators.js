@@ -462,6 +462,7 @@ export const postFeedback = (firstname, lastname, telnum, email, agree, contactT
     });
 
 };
+
 export const addFeedback = (feedback) => ({
     type: ActionTypes.ADD_FEEDBACK,
     payload: feedback
