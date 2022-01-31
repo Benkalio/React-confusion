@@ -25,8 +25,6 @@ function RenderCard({item, isLoading, errMess}) {
                     <CardText>{item.description}</CardText>
                 </CardBody>
             </Card>
-            // <image src = { item && item.image ? item.image : "https://sometestimage.com/test.jpg" } />
-
         );
 }
 
